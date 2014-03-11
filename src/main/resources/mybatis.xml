@@ -26,13 +26,13 @@
     </environments>
     
     <mappers>
-        <mapper resource="com/onlinejudge/judge/mapper/Contest.xml"/>
-        <mapper resource="com/onlinejudge/judge/mapper/File.xml"/>
-        <mapper resource="com/onlinejudge/judge/mapper/Problem.xml"/>
-        <mapper resource="com/onlinejudge/judge/mapper/ProblemFile.xml"/>
-        <mapper resource="com/onlinejudge/judge/mapper/Status.xml"/>
-        <mapper resource="com/onlinejudge/judge/mapper/StudentContest.xml"/>
-        <mapper resource="com/onlinejudge/judge/mapper/Student.xml"/>
-        <mapper resource="com/onlinejudge/judge/mapper/Submit.xml"/>
+        <mapper resource="resources/mappers/Contest.xml"/>
+        <mapper resource="resources/mappers/File.xml"/>
+        <mapper resource="resources/mappers/Problem.xml"/>
+        <mapper resource="resources/mappers/ProblemFile.xml"/>
+        <mapper resource="resources/mappers/Status.xml"/>
+        <mapper resource="resources/mappers/StudentContest.xml"/>
+        <mapper resource="resources/mappers/Student.xml"/>
+        <mapper resource="resources/mappers/Submit.xml"/>
     </mappers>
 </configuration>
