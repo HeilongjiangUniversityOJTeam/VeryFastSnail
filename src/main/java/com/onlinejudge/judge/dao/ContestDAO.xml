@@ -6,7 +6,7 @@
 <mapper namespace="com.onlinejudge.judge.dao.ContestDAO">
 	<select id="count" resultType="int">
 	<![CDATA[
-		select count(1) from contest
+		select count(id) from contest
 	]]>
 	</select>
 </mapper>

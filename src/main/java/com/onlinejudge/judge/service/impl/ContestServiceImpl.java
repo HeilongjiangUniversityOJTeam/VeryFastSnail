@@ -12,8 +12,8 @@ public class ContestServiceImpl implements ContestService {
 	@Autowired
 	private ContestDAO contestDAO;
 
+	@Override
 	public int count() {
-
 		return contestDAO.count();
 	}
 

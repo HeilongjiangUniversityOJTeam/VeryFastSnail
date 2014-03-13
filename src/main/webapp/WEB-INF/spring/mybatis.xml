@@ -12,7 +12,7 @@
         <typeAlias alias="StudentDO" type="com.onlinejudge.judge.domain.StudentDO"/>
         <typeAlias alias="SubmitDO" type="com.onlinejudge.judge.domain.SubmitDO"/>
     </typeAliases> 
-
+<!-- 
     <environments default="development">
         <environment id="development">
         <transactionManager type="JDBC"/>
@@ -24,15 +24,15 @@
             </dataSource>
         </environment>
     </environments>
-    
+-->
     <mappers>
-        <mapper resource="resources/mappers/Contest.xml"/>
-        <mapper resource="resources/mappers/File.xml"/>
-        <mapper resource="resources/mappers/Problem.xml"/>
-        <mapper resource="resources/mappers/ProblemFile.xml"/>
-        <mapper resource="resources/mappers/Status.xml"/>
-        <mapper resource="resources/mappers/StudentContest.xml"/>
-        <mapper resource="resources/mappers/Student.xml"/>
-        <mapper resource="resources/mappers/Submit.xml"/>
+        <mapper resource="classpath*:com/onlinejudge/judge/mappers/ContestMapper.xml"/>
+        <mapper resource="classpath*:com/onlinejudge/judge/mappers/FileMapper.xml"/>
+        <mapper resource="classpath*:com/onlinejudge/judge/mappers/ProblemMapper.xml"/>
+        <mapper resource="classpath*:com/onlinejudge/judge/mappers/ProblemFileMapper.xml"/>
+        <mapper resource="classpath*:com/onlinejudge/judge/mappers/StatusMapper.xml"/>
+        <mapper resource="classpath*:com/onlinejudge/judge/mappers/StudentContestMapper.xml"/>
+        <mapper resource="classpath*:com/onlinejudge/judge/mappers/StudentMapper.xml"/>
+        <mapper resource="classpath*:com/onlinejudge/judge/mappers/SubmitMapper.xml"/>
     </mappers>
 </configuration>
