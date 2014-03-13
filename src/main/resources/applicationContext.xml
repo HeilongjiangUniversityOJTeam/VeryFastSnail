@@ -38,6 +38,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
 		<property name="dataSource" ref="dataSource"></property> 
 		<property name="typeAliasesPackage" value="com.onlinejudge.judge.domain"/> 
+		<property name="mapperLocations" value="classpath*:mappers/*.xml" />
 	</bean> 
 	
 	<!-- 自动扫描Mapper --> 
