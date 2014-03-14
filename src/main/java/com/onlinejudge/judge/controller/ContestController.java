@@ -13,16 +13,16 @@ import com.onlinejudge.judge.service.ContestService;
 @Controller
 @RequestMapping("/contest")
 public class ContestController {
-	
+
 	@Autowired
 	private ContestService contestService;
-	
-	
+
 	@RequestMapping(value = "", method = RequestMethod.GET)
-	public String home(Model model){
+	public String home(Model model) {
+		//NaiyinZhao test
 		int count = contestService.count();
-		model.addAttribute("count",count);
+		model.addAttribute("count", count);
 		return "/contest/contest";
 	}
-	
+
 }
