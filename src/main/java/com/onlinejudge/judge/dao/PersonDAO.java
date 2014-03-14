@@ -1,5 +1,5 @@
 package com.onlinejudge.judge.dao;
 
-public interface StudentContestDAO {
+public interface PersonDAO {
 
 }
