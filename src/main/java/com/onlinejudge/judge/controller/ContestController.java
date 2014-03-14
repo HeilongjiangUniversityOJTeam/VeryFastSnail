@@ -19,7 +19,6 @@ public class ContestController {
 
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String home(Model model) {
-		//NaiyinZhao test
 		int count = contestService.count();
 		model.addAttribute("count", count);
 		return "/contest/contest";
