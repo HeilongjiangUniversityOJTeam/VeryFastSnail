@@ -1,6 +1,6 @@
 package com.onlinejudge.judge.domain;
 
-public class StudentContestDO {
+public class PersonContestDO {
 
 	private Long studentId;
 	private Long contestId;

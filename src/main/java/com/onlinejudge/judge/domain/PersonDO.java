@@ -2,7 +2,7 @@ package com.onlinejudge.judge.domain;
 
 import java.sql.Date;
 
-public class StudentDO {
+public class PersonDO {
 	
 	private Long id;
 	private String username;
