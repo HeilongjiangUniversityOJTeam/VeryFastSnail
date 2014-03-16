@@ -2,7 +2,7 @@ package com.onlinejudge.judge.domain;
 
 import java.sql.Date;
 
-public class ContestDO {
+public class Contest {
 
 	private Long id;
 	private String title;

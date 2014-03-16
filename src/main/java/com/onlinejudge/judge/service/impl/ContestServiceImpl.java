@@ -14,7 +14,7 @@ public class ContestServiceImpl implements ContestService {
 
 	@Override
 	public int count() {
-		return contestDAO.count();
+		return contestDAO.countContest();
 	}
 
 }

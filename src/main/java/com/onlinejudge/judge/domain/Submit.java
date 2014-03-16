@@ -2,7 +2,7 @@ package com.onlinejudge.judge.domain;
 
 import java.sql.Date;
 
-public class SubmitDO {
+public class Submit {
 
 	private Long id;
 	private Long studentId;

@@ -1,6 +1,6 @@
 package com.onlinejudge.judge.domain;
 
-public class ProblemDO {
+public class Problem {
 	
 	private Long problemId;
 	private Long contestId;

@@ -1,6 +1,6 @@
 package com.onlinejudge.judge.domain;
 
-public class StatusDO {
+public class Status {
 
 	private Long studentId;
 	private Long problemId;

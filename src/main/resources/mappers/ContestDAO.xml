@@ -4,7 +4,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.onlinejudge.judge.dao.ContestDAO">
-	<select id="count" resultType="int">
+	<select id="countContest" resultType="int">
 	<![CDATA[
 		select count(id) from contest
 	]]>

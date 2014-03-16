@@ -1,6 +1,6 @@
 package com.onlinejudge.judge.domain;
 
-public class ProblemFileDO {
+public class ProblemFile {
 
 	private Long id;
 	private Long problemId;
