@@ -5,7 +5,7 @@ import java.sql.Date;
 public class Submit {
 
 	private Long id;
-	private Long studentId;
+	private Long accountId;
 	private Long problemId;
 	private Long contestId;
 	private Integer status;
@@ -19,12 +19,12 @@ public class Submit {
 		this.id = id;
 	}
 
-	public Long getStudentId() {
-		return studentId;
+	public Long getAccountId() {
+		return accountId;
 	}
 
-	public void setStudentId(Long studentId) {
-		this.studentId = studentId;
+	public void setAccountId(Long accountId) {
+		this.accountId = accountId;
 	}
 
 	public Long getProblemId() {

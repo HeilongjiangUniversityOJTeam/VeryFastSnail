@@ -2,7 +2,7 @@ package com.onlinejudge.judge.domain;
 
 public class Status {
 
-	private Long studentId;
+	private Long accountId;
 	private Long problemId;
 	private Long contestId;
 	private Integer total;
@@ -13,12 +13,12 @@ public class Status {
 	private Integer mle;
 	private Integer systemError;
 
-	public Long getStudentId() {
-		return studentId;
+	public Long getAccountId() {
+		return accountId;
 	}
 
-	public void setStudentId(Long studentId) {
-		this.studentId = studentId;
+	public void setAccountId(Long accountId) {
+		this.accountId = accountId;
 	}
 
 	public Long getProblemId() {

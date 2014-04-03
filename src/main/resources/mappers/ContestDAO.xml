@@ -4,9 +4,23 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.onlinejudge.judge.dao.ContestDAO">
+	<insert id="addContest" parameterType="com.onlinejudge.judge.domain.Contest" useGeneratedKeys="true" keyProperty="id">
+		insert into contest (title,startTime,endTime) values (#{title},#{startTime},#{endTime})
+	</insert>
+	
+	<delete id="deleteContestById" parameterType="Long">
+		delete from contest where id=#{id}
+	</delete>
+	
+	<update id="updateContest" parameterType="com.onlinejudge.judge.domain.Contest">
+		update contest set title=#{title},startTime=#{startTime},endTime=#{endTime} where id=#{id}
+	</update>
+	
+	<select id="getContestById" parameterType="Long" resultType="com.onlinejudge.judge.domain.Contest">
+		select * from contest where id=#{id}
+	</select>
+	
 	<select id="countContest" resultType="int">
-	<![CDATA[
 		select count(id) from contest
-	]]>
 	</select>
 </mapper>
