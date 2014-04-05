@@ -1,5 +1,7 @@
 package com.onlinejudge.judge.controller;
 
+import java.sql.Date;
+
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -12,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.onlinejudge.judge.domain.Account;
+import com.onlinejudge.judge.exception.ServiceException;
 import com.onlinejudge.judge.service.AccountService;
 
 /**
@@ -21,16 +25,18 @@ import com.onlinejudge.judge.service.AccountService;
  * @modifydate 2014年3月14日
  */
 
-@Controller("/account")
+@Controller
 public class AccountController {
 	
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@Autowired
+	private AccountService accountService;
+	@RequestMapping(value = "login", method = RequestMethod.GET)
 	public String login(Model model) {
 
 		return "account/login";
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String loginRequest(Model model, @RequestParam("username") String username,
 			@RequestParam("password") String password) {
 		
@@ -45,10 +51,37 @@ public class AccountController {
 		return "account/loginSuccess";
 	}
 	
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	public String logout(Model model){
 		SecurityUtils.getSubject().logout();
-		return "logoutSuccess";
+		return "account/logoutSuccess";
 	}
 	
+	@RequestMapping(value = "register", method = RequestMethod.GET)
+	public String registerForm(Model model){
+		return "account/register";
+	}
+	
+	@RequestMapping(value = "register", method = RequestMethod.POST)
+	public String register(Model model, 
+			@RequestParam("username")String username,
+			@RequestParam("password")String password,
+			@RequestParam("email")String email
+			){
+		
+		Account account = new Account();
+		account.setUsername(username);
+		account.setPassword(password);
+		account.setEmail(email);
+		account.setPermission(1);
+		account.setRole(1);
+		account.setCreateTime(new Date(0));
+		try{
+			accountService.registerAccount(account);
+		}catch(ServiceException e){
+			model.addAttribute("info", e.getInfo());
+			return "account/registerFailed";
+		}
+		return "account/registerSuccess";
+	}
 }

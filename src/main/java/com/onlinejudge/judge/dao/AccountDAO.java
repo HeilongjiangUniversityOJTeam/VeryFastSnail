@@ -8,7 +8,7 @@ public interface AccountDAO {
 
 	public Account getAccountByUsername(String username);
 
-	public void addAccount(Account Aaccount);
+	public void addAccount(Account account);
 
 	public void deleteAccountById(Long id);
 

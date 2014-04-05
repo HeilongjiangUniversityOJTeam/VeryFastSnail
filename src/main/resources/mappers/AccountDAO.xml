@@ -13,14 +13,14 @@
 	</select>
 	
 	<insert id="addAccount" parameterType="com.onlinejudge.judge.domain.Account" useGeneratedKeys="true" keyProperty="id">
-		insert into account (username,password,email,permission,createTime,lastVisitTime) values (#{username},#{password},#{email},#{permission},#{createTime},#{lastVisitTime})
+		insert into account (username,password,email,permission,role,createTime,lastVisitTime) values (#{username},#{password},#{email},#{permission},#{role},#{createTime},#{lastVisitTime})
 	</insert>
 	<delete id="deleteAccountById" parameterType="Long">
 		delete from account where id=#{id}
 	</delete>
 	
 	<update id="updateAccount" parameterType="com.onlinejudge.judge.domain.Account">
-		update person set username=#{username},password=#{password},email=#{email},permission=#{permission},createTime=#{createTime},lastVisitTime=#{lastVisitTime} where id=#{id}
+		update person set username=#{username},password=#{password},email=#{email},permission=#{permission},role=#{role},createTime=#{createTime},lastVisitTime=#{lastVisitTime} where id=#{id}
 	</update>
 	
 </mapper>

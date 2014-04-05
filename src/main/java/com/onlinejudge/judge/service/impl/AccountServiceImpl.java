@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.onlinejudge.judge.common.AccountPermission;
 import com.onlinejudge.judge.dao.AccountDAO;
 import com.onlinejudge.judge.domain.Account;
+import com.onlinejudge.judge.exception.ServiceException;
 import com.onlinejudge.judge.service.AccountService;
 
 /**
@@ -44,6 +45,16 @@ public class AccountServiceImpl implements AccountService {
 			permissionStringList.add("normal");
 		}
 		return permissionStringList;
+	}
+
+	@Override
+	public void registerAccount(Account account) throws ServiceException{
+		if(account.getUsername() != null && !account.getUsername().equals("") && account.getPassword() != null && !account.getPassword().equals("")){
+			accountDAO.addAccount(account);
+		}
+		else{
+			throw new ServiceException("用户名，密码，邮箱不能为空");
+		}
 	}
 
 }

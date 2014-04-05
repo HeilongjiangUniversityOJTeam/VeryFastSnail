@@ -9,6 +9,7 @@ public class Account {
 	private String password;
 	private String email;
 	private Integer permission;
+	private Integer role;
 	private Date createTime;
 	private Date lastVisitTime;
 
@@ -50,6 +51,14 @@ public class Account {
 
 	public void setPermission(Integer permission) {
 		this.permission = permission;
+	}
+
+	public Integer getRole() {
+		return role;
+	}
+
+	public void setRole(Integer role) {
+		this.role = role;
 	}
 
 	public Date getCreateTime() {

@@ -15,4 +15,6 @@ public interface AccountService {
 	public Account getAccountByUsername(String username);
 
 	public List<String> getPermissionsByAccount(Account account);
+	
+	public void registerAccount(Account account);
 }

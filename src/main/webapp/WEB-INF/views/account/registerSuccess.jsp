@@ -1,11 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 	<head>
-		<title>Login Failed</title>
+		<title>Register Success</title>
 	</head>
-<body>
-	Login Failed
-	<br>
-	${message}
-</body>
+	<body>
+		<h1>Register Success</h1>
+	</body>
 </html>
