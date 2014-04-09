@@ -23,4 +23,8 @@
 	<select id="countContest" resultType="int">
 		select count(id) from contest
 	</select>
+	
+	<select id="getContestList" resultType = "com.onlinejudge.judge.domain.Contest">
+		select * from contest
+	</select>
 </mapper>

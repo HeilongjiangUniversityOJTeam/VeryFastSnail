@@ -5,9 +5,11 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
+
+<li><a href="/">Home</a></li>
+<li><a href="/contest/">Contest</a></li>
+<li><a href="/problem/">Problem</a></li>
+<li><a href="/rank/">Rank</a></li>
 
 <P>  The time on the server is ${serverTime}. </P>
 </body>

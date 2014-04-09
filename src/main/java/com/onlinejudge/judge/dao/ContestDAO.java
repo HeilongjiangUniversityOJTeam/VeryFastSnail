@@ -1,5 +1,7 @@
 package com.onlinejudge.judge.dao;
 
+import java.util.List;
+
 import com.onlinejudge.judge.domain.Contest;
 
 public interface ContestDAO {
@@ -13,4 +15,10 @@ public interface ContestDAO {
 	public Contest getContestById(Long id);
 
 	public int countContest();
+	
+	public List<Contest> getContestList();
+
+	public List<Contest> getContestListBetweenId(Long startId, Long endId);
+	
+	
 }
