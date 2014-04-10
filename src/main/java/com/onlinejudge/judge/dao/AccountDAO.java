@@ -1,5 +1,7 @@
 package com.onlinejudge.judge.dao;
 
+import java.util.List;
+
 import com.onlinejudge.judge.domain.Account;
 
 public interface AccountDAO {
@@ -13,5 +15,7 @@ public interface AccountDAO {
 	public void deleteAccountById(Long id);
 
 	public void updateAccount(Account account);
+	
+	public List<Account>getAccountList();
 
 }

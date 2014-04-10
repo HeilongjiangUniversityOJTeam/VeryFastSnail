@@ -40,8 +40,8 @@ public class ShiroDbRealm extends AuthorizingRealm {
 		Account account = accountService.getAccountByUsername(username);
 		if(account != null){
 			SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-			List<String>permissions = accountService.getPermissionsByAccount(account);
-			info.addStringPermissions(permissions);
+			List<String>permissionList = accountService.getPermissionListByAccount(account);
+			info.addStringPermissions(permissionList);
 		}
 		return null;
 	}

@@ -30,7 +30,7 @@ public class AccountServiceImpl implements AccountService {
 	}
 
 	@Override
-	public List<String> getPermissionsByAccount(Account account) {
+	public List<String> getPermissionListByAccount(Account account) {
 		int permission = account.getPermission();
 		List<String> permissions = permissionToStringList(permission);
 		return permissions;
@@ -55,6 +55,11 @@ public class AccountServiceImpl implements AccountService {
 		else{
 			throw new ServiceException("用户名，密码，邮箱不能为空");
 		}
+	}
+
+	@Override
+	public List<Account> getAccountList() {
+		return accountDAO.getAccountList();
 	}
 
 }

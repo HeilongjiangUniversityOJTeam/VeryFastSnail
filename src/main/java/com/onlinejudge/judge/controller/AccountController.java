@@ -30,13 +30,14 @@ public class AccountController {
 	
 	@Autowired
 	private AccountService accountService;
-	@RequestMapping(value = "login", method = RequestMethod.GET)
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model model) {
 
 		return "account/login";
 	}
 
-	@RequestMapping(value = "login", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String loginRequest(Model model, @RequestParam("username") String username,
 			@RequestParam("password") String password) {
 		
@@ -51,18 +52,18 @@ public class AccountController {
 		return "account/loginSuccess";
 	}
 	
-	@RequestMapping(value = "logout", method = RequestMethod.GET)
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(Model model){
 		SecurityUtils.getSubject().logout();
 		return "account/logoutSuccess";
 	}
 	
-	@RequestMapping(value = "register", method = RequestMethod.GET)
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String registerForm(Model model){
 		return "account/register";
 	}
 	
-	@RequestMapping(value = "register", method = RequestMethod.POST)
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String register(Model model, 
 			@RequestParam("username")String username,
 			@RequestParam("password")String password,

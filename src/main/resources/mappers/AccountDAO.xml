@@ -22,5 +22,7 @@
 	<update id="updateAccount" parameterType="com.onlinejudge.judge.domain.Account">
 		update person set username=#{username},password=#{password},email=#{email},permission=#{permission},role=#{role},createTime=#{createTime},lastVisitTime=#{lastVisitTime} where id=#{id}
 	</update>
-	
+	<select id="getAccountList" resultType="com.onlinejudge.judge.domain.Account">
+		select * from account
+	</select>
 </mapper>
