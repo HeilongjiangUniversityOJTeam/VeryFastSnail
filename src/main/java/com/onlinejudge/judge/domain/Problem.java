@@ -1,9 +1,9 @@
 package com.onlinejudge.judge.domain;
 
 public class Problem {
-	
-	private Long problemId;
+
 	private Long contestId;
+	private Long problemId;
 	private String title;
 	private String description;
 	private String inputDescription;
@@ -11,20 +11,20 @@ public class Problem {
 	private String inputSample;
 	private String outputSample;
 
-	public Long getProblemId() {
-		return problemId;
-	}
-
-	public void setProblemId(Long problemId) {
-		this.problemId = problemId;
-	}
-
 	public Long getContestId() {
 		return contestId;
 	}
 
 	public void setContestId(Long contestId) {
 		this.contestId = contestId;
+	}
+
+	public Long getProblemId() {
+		return problemId;
+	}
+
+	public void setProblemId(Long problemId) {
+		this.problemId = problemId;
 	}
 
 	public String getTitle() {

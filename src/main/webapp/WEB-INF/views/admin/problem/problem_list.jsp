@@ -2,58 +2,38 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 	<head>
-		<title>Admin Account</title>
+		<title>Admin Problem</title>
 	</head>
 	<body>
 		<!-- menu -->
 		<%@include file="../common/admin_menu.jsp" %>
 		
-		<!-- add account link -->
-		<a href = "/admin/account/add">Add Account</a>
+		<!-- add problem link -->
+		<a href = "/admin/problem/add">Add Problem</a>
 		
-		<!-- show all account for update or delete account -->
+		<!-- show all Problem for update or delete problem -->
 		<table>
 			<tr>
-				<th>id</th>
-				<th>username</th>
-				<th>password</th>
-				<th>email</th>
-				<th>permission</th>
-				<th>role</th>
-				<th>createTime</th>
-				<th>lastVisitTime</th>
-				
+				<th>contestId</th>
+				<th>problemId</th>
+				<th>title</th>
 				<!-- checkbox -->
 				<th>#</th>
 				
 				<th>Delete</th>
 				<th>Stop</th>
+				<th>Update</th>
 			</tr>
-			<c:forEach items="${accountList}" var="result">
+			<c:forEach items="${problemList}" var="result">
 			<tr>
 				<td>
-					${result.id}
+					${result.contestId }
 				</td>
 				<td>
-					${result.username }
+					${result.problemId }
 				</td>
 				<td>
-					${result.password }
-				</td>
-				<td>
-					${result.email }
-				</td>
-				<td>
-					${result.permission }
-				</td>
-				<td>
-					${result.role }
-				</td>
-				<td>
-					${result.createTime }
-				</td>
-				<td>
-					${result.lastVisitTime }
+					${result.title }
 				</td>
 				<td>
 					<input type="checkbox" />
@@ -64,12 +44,15 @@
 				<td>
 					<input type="submit" value="stop" />
 				</td>
+				<td>
+					<a href="/admin/problem/update/${result.contestId }/${result.problemId }">update</a>
+				</td>
 			</tr>
 			</c:forEach>
 		</table>
 		
 		<br>
-		<!-- batchDelete & batchStop Account -->
+		<!-- batchDelete & batchStop Problem -->
 		<input type="submit" value="batchDelete" />
 		<input type="submit" value="batchStop" />
 		

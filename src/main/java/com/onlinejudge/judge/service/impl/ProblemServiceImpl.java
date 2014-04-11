@@ -45,5 +45,15 @@ public class ProblemServiceImpl implements ProblemService{
 			problemDAO.deleteProblemByContestIdAndProblemId(contestId, problemId);
 		}
 	}
+
+	@Override
+	public void addProblem(Problem problem) {
+		problemDAO.addProblem(problem);
+	}
+
+	@Override
+	public void updateProblem(Problem problem) {
+		problemDAO.updateProblem(problem);
+	}
 	
 }

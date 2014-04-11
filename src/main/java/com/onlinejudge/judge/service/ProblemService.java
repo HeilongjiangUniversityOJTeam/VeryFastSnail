@@ -12,4 +12,6 @@ public interface ProblemService {
 	public void deleteProblemByContestIdAndProblemId(Long contestId, Long problemId);
 	/* 日后优化 */
 	public void batchDeleteProblemByContestIdAndProblemIds(Long contestId,List<Long> problemIds);
+	public void addProblem(Problem problem);
+	public void updateProblem(Problem problem);
 }

@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<!-- menu -->
-		<%@include file="../common/menu.jsp" %>
+		<%@include file="../common/admin_menu.jsp" %>
 		
 		<table>
 			<tr>
