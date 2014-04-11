@@ -1,4 +1,4 @@
-package com.onlinejudge.judge.controller;
+package com.onlinejudge.judge.controller.admin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,20 +18,5 @@ public class AdminController {
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String adminHome(Model model) {
 		return "admin/home";
-	}
-	
-	@RequestMapping(value = "/account", method = RequestMethod.GET)
-	public String adminAccount(Model model){
-		return "admin/account";
-	}
-	
-	@RequestMapping(value = "/contest", method = RequestMethod.GET)
-	public String adminContest(Model model){
-		return "admin/contest";
-	}
-	
-	@RequestMapping(value = "/problem", method = RequestMethod.GET)
-	public String adminProblem(Model model){
-		return "admin/problem";
 	}
 }

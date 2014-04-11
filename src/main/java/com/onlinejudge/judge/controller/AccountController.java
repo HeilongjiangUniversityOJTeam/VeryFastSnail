@@ -1,6 +1,7 @@
 package com.onlinejudge.judge.controller;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -76,7 +77,7 @@ public class AccountController {
 		account.setEmail(email);
 		account.setPermission(1);
 		account.setRole(1);
-		account.setCreateTime(new Date(0));
+		account.setCreateTime(new Date());
 		try{
 			accountService.registerAccount(account);
 		}catch(ServiceException e){

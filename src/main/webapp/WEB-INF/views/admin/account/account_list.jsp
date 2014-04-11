@@ -5,14 +5,9 @@
 		<title>Admin Account</title>
 	</head>
 	<body>
+		<!-- menu -->
+		<%@include file="../common/menu.jsp" %>
 		
-		<a href = "/admin/account"><li>Account Manager</li></a>
-		<br>
-		<a href= "/admin/contest"><li>Contest Manager</li></a>
-		<br>
-		<a href = "/admin/problem"><li>Problem Manager</li></a>
-		<br>
-		<hr>
 		<!-- add account link -->
 		<a href = "/admin/account/add">Add Account</a>
 		
@@ -27,6 +22,12 @@
 				<th>role</th>
 				<th>createTime</th>
 				<th>lastVisitTime</th>
+				
+				<!-- checkbox -->
+				<th>#</th>
+				
+				<th>Delete</th>
+				<th>Stop</th>
 			</tr>
 			<c:forEach items="${accountList}" var="result">
 			<tr>
@@ -54,9 +55,24 @@
 				<td>
 					${result.lastVisitTime }
 				</td>
+				<td>
+					<input type="checkbox" />
+				</td>
+				<td>
+					<input type="submit" value="delete" />
+				</td>
+				<td>
+					<input type="submit" value="stop" />
+				</td>
 			</tr>
 			</c:forEach>
 		</table>
+		
+		<br>
+		<!-- batchDelete & batchStop Account -->
+		<input type="submit" value="batchDelete" />
+		<input type="submit" value="batchStop" />
+		
 	</body>
 
 </html>

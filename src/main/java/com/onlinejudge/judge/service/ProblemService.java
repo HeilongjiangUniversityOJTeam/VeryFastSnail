@@ -9,5 +9,7 @@ public interface ProblemService {
 	
 	public List<Problem>getProblemListByContestId(Long contestId);
 	public Problem getProblemByContestIdAndProblemId(Long contestId, Long problemId);
-	
+	public void deleteProblemByContestIdAndProblemId(Long contestId, Long problemId);
+	/* 日后优化 */
+	public void batchDeleteProblemByContestIdAndProblemIds(Long contestId,List<Long> problemIds);
 }

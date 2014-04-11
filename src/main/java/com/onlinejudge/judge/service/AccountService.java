@@ -19,4 +19,8 @@ public interface AccountService {
 	public void registerAccount(Account account);
 	
 	public List<Account> getAccountList();
+	
+	public void deleteAccountById(Long id);
+	/* 日后优化 */
+	public void batchDeleteAccountByIdList(List<Long>ids);
 }

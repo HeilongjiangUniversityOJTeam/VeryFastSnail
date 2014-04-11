@@ -62,4 +62,16 @@ public class AccountServiceImpl implements AccountService {
 		return accountDAO.getAccountList();
 	}
 
+	@Override
+	public void deleteAccountById(Long id) {
+		accountDAO.deleteAccountById(id);
+	}
+
+	@Override
+	public void batchDeleteAccountByIdList(List<Long> ids) {
+		for(Long id: ids){
+			accountDAO.deleteAccountById(id);
+		}
+	}
+
 }

@@ -15,4 +15,5 @@ public interface ContestService {
 
 	List<Contest> getContestListBetweenId(Long startId, Long endId);
 	
+	public void deleteContestById(Long id);
 }

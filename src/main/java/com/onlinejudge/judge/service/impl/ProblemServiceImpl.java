@@ -30,5 +30,20 @@ public class ProblemServiceImpl implements ProblemService{
 	public Problem getProblemByContestIdAndProblemId(Long contestId, Long problemId) {
 		return problemDAO.getProblemByContestIdAndProblemId(contestId, problemId);
 	}
+
+	@Override
+	public void deleteProblemByContestIdAndProblemId(Long contestId,
+			Long problemId) {
+		problemDAO.deleteProblemByContestIdAndProblemId(contestId, problemId);
+		
+	}
+
+	@Override
+	public void batchDeleteProblemByContestIdAndProblemIds(Long contestId,
+			List<Long> problemIds) {
+		for(Long problemId: problemIds){
+			problemDAO.deleteProblemByContestIdAndProblemId(contestId, problemId);
+		}
+	}
 	
 }

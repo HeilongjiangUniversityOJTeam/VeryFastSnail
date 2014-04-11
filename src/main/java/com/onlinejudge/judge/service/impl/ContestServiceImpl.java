@@ -36,5 +36,10 @@ public class ContestServiceImpl implements ContestService {
 		return contestDAO.getContestListBetweenId(startId, endId);
 	}
 
+	@Override
+	public void deleteContestById(Long id) {
+		contestDAO.deleteContestById(id);
+	}
+
 
 }
